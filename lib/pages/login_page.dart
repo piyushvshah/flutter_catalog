@@ -59,6 +59,8 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (value) {
                           if (value!.isEmpty) {
                             return "Username cannot be Empty";
+                          } else {
+                            return null;
                           }
                         },
                         decoration: InputDecoration(
@@ -73,6 +75,8 @@ class _LoginPageState extends State<LoginPage> {
                             return "Password cannot be Empty";
                           } else if (value.length < 6) {
                             return "Password must be 6 digit long";
+                          } else {
+                            return null;
                           }
                         },
                       )
